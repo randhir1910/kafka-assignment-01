@@ -1,7 +1,5 @@
 package model
 
-trait Student {
-  override def toString: String = super.toString
+case class StudentData(id: String, name: String){
+  override def toString: String =s"(id ->$id , name ->$name)\n"
 }
-
-case class StudentData(id: String, name: String) extends Student

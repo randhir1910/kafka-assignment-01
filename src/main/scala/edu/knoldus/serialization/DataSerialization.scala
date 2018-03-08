@@ -1,3 +1,5 @@
+package edu.knoldus.serialization
+
 import java.io.{ByteArrayOutputStream, ObjectOutputStream, ObjectStreamException}
 import java.util
 
@@ -6,9 +8,13 @@ import org.apache.kafka.common.serialization.Serializer
 
 class DataSerialization extends Serializer[StudentData] {
 
-  override def configure(map: util.Map[String, _], b: Boolean): Unit = ???
+  override def configure(map: util.Map[String, _], b: Boolean): Unit = {
 
-  override def close(): Unit = ???
+  }
+
+  override def close(): Unit = {
+
+  }
 
   override def serialize(topic: String, data: StudentData): Array[Byte] = {
     try {

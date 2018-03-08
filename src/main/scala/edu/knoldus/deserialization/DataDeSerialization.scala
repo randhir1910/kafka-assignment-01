@@ -7,9 +7,13 @@ import org.apache.kafka.common.serialization.Deserializer
 
 class DataDeSerialization extends Deserializer[StudentData] {
 
-  override def configure(map: util.Map[String, _], b: Boolean): Unit = ???
+  override def configure(map: util.Map[String, _], b: Boolean): Unit = {
 
-  override def close(): Unit = ???
+  }
+
+  override def close(): Unit = {
+
+  }
 
   override def deserialize(topic: String, bytes: Array[Byte]) = {
     val byteArrayInputStream = new ByteArrayInputStream(bytes)

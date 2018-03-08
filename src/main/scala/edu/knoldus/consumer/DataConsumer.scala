@@ -13,8 +13,8 @@ object DataConsumer extends App {
   val props = new Properties()
   props.put("bootstrap.servers", "localhost:9092")
   props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
-  props.put("value.deserializer", "edu.knoldus.deserialization/DataDeSerialization")
-  props.put("group.id", "studentList-group")
+  props.put("value.deserializer", "edu.knoldus.deserialization.DataDeSerialization")
+  props.put("group.id", "studentList")
   props.put("enable.auto.commit", "false")
 
   val consumer = new KafkaConsumer[String, StudentData](props)

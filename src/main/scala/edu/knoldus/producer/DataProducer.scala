@@ -18,7 +18,7 @@ object DataProducer extends App {
 
   val producer = new KafkaProducer[String, StudentData](props)
 
-  for (index <- 1 to studentList.size) {
+  for (index <- 0 until studentList.size) {
     val key = index.toString
     val value = StudentData(key, studentList(index))
     val record = new ProducerRecord[String, StudentData](topic, key, value)
