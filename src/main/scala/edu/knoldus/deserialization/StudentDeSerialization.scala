@@ -5,7 +5,7 @@ import java.util
 import model.StudentData
 import org.apache.kafka.common.serialization.Deserializer
 
-class DataDeSerialization extends Deserializer[StudentData] {
+class StudentDeSerialization extends Deserializer[StudentData] {
 
   override def configure(map: util.Map[String, _], b: Boolean): Unit = {
 

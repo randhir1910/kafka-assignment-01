@@ -6,7 +6,7 @@ import java.util
 import model.StudentData
 import org.apache.kafka.common.serialization.Serializer
 
-class DataSerialization extends Serializer[StudentData] {
+class StudentSerialization extends Serializer[StudentData] {
 
   override def configure(map: util.Map[String, _], b: Boolean): Unit = {
 
